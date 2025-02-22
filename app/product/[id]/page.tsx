@@ -82,7 +82,7 @@ export default function ProductPage() {
   const modelPath = modelPaths[id];
 
   return (
-    <main className="min-h-screen bg-gray-100 flex flex-col items-center justify-center py-8">
+    <main className="p-3 min-h-screen bg-gray-100 flex flex-col items-center justify-center py-8">
       <div className="w-full max-w-4xl h-[80vh] bg-white rounded-lg shadow-lg overflow-hidden">
         <Canvas camera={position[id]}>
           <ambientLight intensity={0.5} />

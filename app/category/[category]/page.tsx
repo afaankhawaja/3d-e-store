@@ -1,9 +1,15 @@
-import Image from "next/image";
-import Link from "next/link";
-
+"use client"
+import React from 'react'
 import {products} from '@/constants/products'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useParams } from 'next/navigation'
 
-export default function Home() {
+
+const Page = () => {
+  const params = useParams<{ category: string }>()
+  console.log('params', params)
+
   return (
     <main className="min-h-screen bg-gray-100 py-12">
       <div className="container mx-auto px-4">
@@ -17,7 +23,7 @@ export default function Home() {
           </p>
         </header>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product) => (
+          {products.filter((item)=>item.category===params.category).map((product) => (
             <Link key={product.id} href={`/product/${product.id}`}>
               <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
                 <Image
@@ -42,5 +48,7 @@ export default function Home() {
         </div>
       </div>
     </main>
-  );
+  )
 }
+
+export default Page
