@@ -1,10 +1,16 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
+import {useGLTF} from "@react-three/drei"
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 import { products } from "@/constants/products";
 
 export default function Home() {
+    const { nodes, materials } = useGLTF('/models/chair.glb');
+  console.log('nodes', nodes)
+  console.log('materials', materials)
   return (
     <main id="main" className="min-h-screen bg-gray-100 py-12">
       <div className="container mx-auto px-4">
@@ -38,7 +44,7 @@ export default function Home() {
                   </p>
 
                   <div className="mt-2 text-yellow-600 font-semibold flex justify-between">
-                    <div>Customize &rarr;</div>
+                    <div className="flex gap-x-2 justify-center items-center hover:scale-105 hover:font-bold"><p>View 3D</p> <div className="hover:rotate-[-45deg] transition-all duration-300"><ArrowForwardIcon/></div></div>
                     <div className="text-black font-bold">{product.price}</div>
                   </div>
                 </div>

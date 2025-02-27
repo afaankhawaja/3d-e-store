@@ -8,15 +8,15 @@ export const products = [
     category: "Furniture",
     price: "35$",
   },
-  {
-    id: "chair",
-    name: "Ergonomic Chair",
-    description:
-      "Personalize your chair with customizable upholstery and design options.",
-    image: "/images/chair.png",
-    category: "Furniture",
-    price: "5$",
-  },
+  // {
+  //   id: "chair",
+  //   name: "Ergonomic Chair",
+  //   description:
+  //     "Personalize your chair with customizable upholstery and design options.",
+  //   image: "/images/chair.png",
+  //   category: "Furniture",
+  //   price: "5$",
+  // },
   {
     id: "table",
     name: "Coffee Table",

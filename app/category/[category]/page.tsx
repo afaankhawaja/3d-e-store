@@ -44,7 +44,7 @@ const Page = () => {
                     </p>
 
                     <div className="mt-2 text-green-800 font-semibold flex justify-between">
-                      <div>Customize &rarr;</div>
+                      <div>View 3D &rarr;</div>
                       <div className="text-black font-bold">
                         {product.price}
                       </div>

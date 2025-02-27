@@ -20,7 +20,7 @@ export default function Navbar() {
           {categories.map((category) => (
             <Link
               key={category}
-              href={`/category/${category}`}
+              href={category==="All"? '/':`/category/${category}`}
               className="hover:text-secondary-foreground"
             >
               <div className="text-gray-100 font-semibold hover:text-gray-400">
